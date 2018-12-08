@@ -10,7 +10,7 @@
   <meta property="og:title" content="<%- config.title + (page.title ? ' | ' + page.title : '')%>" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<%- page.permalink %>" />
-  <meta property="og:image" content="<%- page.photos[0] ? url_for(page.photos[0]) : url_for('img/avatar.jpg') %>" />
+  <meta property="og:image" content="<%- page.photos ? url_for(page.photos[0]) : url_for('img/avatar.jpg') %>" />
 
   <%- css('css/style')%>
   <% if (theme.favicon) { %>
