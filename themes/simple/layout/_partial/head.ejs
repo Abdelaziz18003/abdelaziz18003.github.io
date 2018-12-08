@@ -9,7 +9,7 @@
   <!-- OG tags -->
   <meta property="og:title" content="<%- config.title + (page.title ? ' | ' + page.title : '')%>" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="<%- page.permalink %>" />
+  <meta property="og:url" content="<%- url %>" />
   <meta property="og:description" content="<%- page.description %>" />
   <meta property="og:image" content="<%- page.photos ? url_for(page.photos[0]) : url_for('img/avatar.jpg') %>" />
 
