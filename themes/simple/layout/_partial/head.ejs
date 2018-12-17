@@ -7,7 +7,7 @@
   <title><%- config.title + (page.title ? ' | ' + page.title : '')%></title>
 
   <!-- OG tags -->
-  <meta property="og:title" content="<%- config.title + (page.title ? ' | ' + page.title : '')%>" />
+  <meta property="og:title" content="<%- (page.title ? page.title + ' | ' : '') + config.title %>" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<%- url %>" />
   <meta property="og:description" content="<%- page.description || theme.aboutme%>" />
