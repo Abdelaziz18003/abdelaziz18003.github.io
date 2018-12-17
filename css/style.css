@@ -257,22 +257,18 @@ pre .keyword,
 pre .javascript .function {
   color: #c9c;
 }
+html {
+  font-size: 10px;
+}
 body {
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.5;
 }
 .container {
-  max-width: 720px;
+  max-width: 700px;
   margin: 0px auto;
-}
-ul {
-  padding: 0px;
-}
-ul li {
-  list-style: none;
-  line-height: 1.5;
 }
 a {
   color: #333;
@@ -280,6 +276,11 @@ a {
 .navbar ul {
   display: flex;
   justify-content: flex-end;
+  padding: 0px;
+}
+.navbar ul li {
+  list-style: none;
+  line-height: 1.5;
 }
 .avatar {
   border-radius: 50%;
@@ -287,10 +288,24 @@ a {
   max-height: 200px;
   overflow: hidden;
 }
-.avatar img {
+.avatar.small {
+  max-width: 50px;
+  max-height: 50px;
+}
+img {
   max-width: 100%;
 }
 .post {
-  font-size: 18px;
-  line-height: 2;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  padding-bottom: 2.5rem;
+}
+article > table {
+  width: 100%;
+  border-collapse: collapse;
+}
+article > table,
+article > table th,
+article > table td {
+  border: 1px solid #000;
 }
