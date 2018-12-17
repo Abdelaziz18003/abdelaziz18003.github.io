@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "hexo server --debug",
-    "build": "hexo generate",
+    "build": "rm ./public -rf && hexo generate",
     "deploy": "gh-pages -d public -b master"
   },
   "dependencies": {
