@@ -5,7 +5,6 @@
       <li>
         <a href="<%- url_for(post.path) %>"><%= post.title %></a>
         <small class="ml-md"><%= date(post.date, config.date_format) %></small>
-        <%- post.photos %>
       </li>
     <% }) %>
   </ul>
