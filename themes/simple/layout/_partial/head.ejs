@@ -13,6 +13,9 @@
   <meta property="og:description" content="<%- page.description || theme.aboutme%>" />
   <meta property="og:image" content="<%- page.photos ? url_for(page.photos[0]) : url_for('img/avatar.jpg') %>" />
 
+  <!-- facebook comments configs -->
+  <meta property="fb:app_id" content="<%- theme.facebook_appId %>" />
+
   <!-- Google Analytics -->
   <% if (theme.google_analytics_enabled) { %>
     <script>

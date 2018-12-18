@@ -20,6 +20,8 @@ aboutme: |
 
 facebook_comments_enabled: true
 
+facebook_appId: 2310907609140126
+
 google_analytics_enabled: true
 
 google_adsense_enabled: true
