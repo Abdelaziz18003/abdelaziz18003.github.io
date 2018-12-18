@@ -26,6 +26,17 @@
     </script>
   <% } %>
 
+  <!-- Google ads -->
+  <% if (theme.google_adsense_enabled) { %>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-6162132697447719",
+        enable_page_level_ads: true
+      });
+    </script>
+  <% } %>
+
   <%- css('css/style')%>
   <% if (theme.favicon) { %>
   <link rel="icon" href="<%- theme.favicon %>">

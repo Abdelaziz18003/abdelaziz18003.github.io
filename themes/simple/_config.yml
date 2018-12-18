@@ -21,3 +21,5 @@ aboutme: |
 facebook_comments_enabled: true
 
 google_analytics_enabled: true
+
+google_adsense_enabled: true
