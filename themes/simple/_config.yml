@@ -18,10 +18,4 @@ favicon: /img/favicon.jpg
 aboutme: |
   My name is Abdelaziz Mokhnache. I am a PHD student in electronic instrumentation engineering working on digital image processing. I work as a freelance Javascript developer on Upwork mostly on Express/Vue.js projects. I love everything related to Javascript and hate everything related to football.
 
-facebook_comments_enabled: true
-
-facebook_appId: 2310907609140126
-
 google_analytics_enabled: true
-
-google_adsense_enabled: true

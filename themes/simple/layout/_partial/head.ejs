@@ -13,9 +13,6 @@
   <meta property="og:description" content="<%- page.description || theme.aboutme%>" />
   <meta property="og:image" content="<%- page.photos ? url_for(page.photos[0]) : url_for('img/avatar.jpg') %>" />
 
-  <!-- facebook comments configs -->
-  <meta property="fb:app_id" content="<%- theme.facebook_appId %>" />
-
   <!-- Google Analytics -->
   <% if (theme.google_analytics_enabled) { %>
     <script>
@@ -26,17 +23,6 @@
 
     ga('create', 'UA-131006931-1', 'auto');
     ga('send', 'pageview');
-    </script>
-  <% } %>
-
-  <!-- Google ads -->
-  <% if (theme.google_adsense_enabled) { %>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-6162132697447719",
-        enable_page_level_ads: true
-      });
     </script>
   <% } %>
 
