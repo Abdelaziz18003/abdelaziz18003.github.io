@@ -114,7 +114,7 @@ code {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 code {
-  background: #eee;
+  background: #ccc;
   text-shadow: 0 1px #fff;
   padding: 0 0.3em;
 }
@@ -266,6 +266,9 @@ body {
   font-size: 1.8rem;
   line-height: 1.5;
 }
+h1 {
+  font-size: calc(2rem + 0.6vw);
+}
 .container {
   max-width: 700px;
   margin: 0px auto;
@@ -299,6 +302,12 @@ img {
   font-size: 1.8rem;
   line-height: 1.6;
   padding-bottom: 2.5rem;
+}
+.post h1 {
+  font-size: calc(1.3em + 1vw);
+}
+.post h2 {
+  font-size: calc(1em + 1vw);
 }
 article > table {
   width: 100%;

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Abdelaziz Mokhnache | How to create node.js CLI an publish it to NPM</title>
+
+  <!-- OG tags -->
+  <meta property="og:title" content="How to create node.js CLI an publish it to NPM | Abdelaziz Mokhnache">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mokhnache.com/blog/how-to-create-a-node-cli-and-publish-it-to-npm/index.html">
+  <meta property="og:description" content="In this article, we will see together how to create a basic node.js CLI and share it with the world using NPM.">
+  <meta property="og:image" content="/img/node-cli.jpg">
+
+  <!-- Google Analytics -->
+  
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-131006931-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <link rel="icon" href="/img/favicon.jpg">
+  
+</head>
+</html>
+<body>
+  <!-- facebook comments script -->
+  
+
+  <!-- rest of body -->
+  <div class="container">
+    <header>
+  <nav class="navbar">
+    <ul>
+      
+        <li><a href="/" class="ml-md">home</a></li>
+      
+        <li><a href="/blog" class="ml-md">blog</a></li>
+      
+    </ul>
+  </nav>
+</header>
+    <div class="post">
+  <h1>How to create node.js CLI an publish it to NPM</h1>
+
+  <!-- article info -->
+  <div class="row items-center">
+    <small>Published 26 May 2019</small>
+    <small class="ml-lg">7 min. read</small>
+  </div>
+
+  <!-- article content -->
+  <article><p><img src="/img/node-cli.jpg" alt="node-cli"></p>
+<p>The toy programming language that <a href="https://en.wikipedia.org/wiki/Brendan_Eich" target="_blank" rel="noopener">Brendan Eich</a> created back in the 90s, has became recently one of the most powerful and popular programming languages in the world. One of the big reasons that led to that progress is the invention of Node.js in 2009 by <a href="https://en.wikipedia.org/wiki/Ryan_Dahl" target="_blank" rel="noopener">Ryan Dahl</a>. Node.js and its large package management system NPM took Javascript from just being a simple scripting language for web browsers to be a full featured language that runs everywhere and helps building all kinds of cool pieces of software.</p>
+<p>In this article, we will see together how to create a basic node.js CLI and share it with the world using NPM.</p>
+<h2 id="Let-it-be-simple"><a href="#Let-it-be-simple" class="headerlink" title="Let it be simple"></a>Let it be simple</h2><p>The CLI that we are going to build is the simplest CLI that could ever exist. We don’t need to spend our energy building a complex one, because we have more important things to discuss. All what our CLI will do is taking a <code>name</code> and printing <code>Hello {name}, welcome to node.js!</code> to the console, as shown below.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hello Mohammed</span><br><span class="line">Hello Mohammed, welcome to node.js!</span><br></pre></td></tr></table></figure>
+<h2 id="Let’s-make-it"><a href="#Let’s-make-it" class="headerlink" title="Let’s make it"></a>Let’s make it</h2><p>First, let’s make a folder called <code>hello</code>. Inside it, let’s create a <code>cli.js</code> file that will contain all our code. Yes of course! you can name it as you want as long as you stay consistent with the name you chose. Here is all the code we need to be written to <code>cli.js</code>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cli.js</span></span><br><span class="line"><span class="keyword">let</span> name = process.argv[<span class="number">2</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`Hello <span class="subst">$&#123;name&#125;</span>, welcome to node.js!`</span>);</span><br></pre></td></tr></table></figure>
+<p>let’s now run the script by typing <code>node cli.js Mohammed</code> and there you go. You should get <code>Hello Mohammed, welcome to node.js!</code> printed to the console.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node cli.js Mohammed</span><br><span class="line">Hello Mohammed, welcome to node.js!</span><br></pre></td></tr></table></figure>
+<p>In case you are wondering what <code>process.argv</code> means, it is simply an array that contains all the options that are passed in the command line when excuting the script. The first element of the array <code>argv[0]</code> is the path to the <code>node</code> command in the filesystem, the second <code>argv[1]</code> is the path to the script file <code>path/to/cli.js</code> that we want to execute while the third <code>argv[2]</code> is the <code>name</code> that we want to print.</p>
+<p>Great, the script now is printing the message that we are expecting. But, Didn’t we say above that the usage should be <code>hello {name}</code> not <code>node cli.js {name}</code>? Yes, we did. And this is what we are going to do together right now.</p>
+<h2 id="It-is-just-Shebang-not-Magic"><a href="#It-is-just-Shebang-not-Magic" class="headerlink" title="It is just Shebang not Magic"></a>It is just Shebang not Magic</h2><p>Have you ever seen this comment <code>#!/usr/bin/env node</code> at the very top of a Javascript file and wondered what this is for? We all were in the same situation. This is called the <a href="https://en.wikipedia.org/wiki/Shebang_&#40;Unix&#41;" target="_blank" rel="noopener">Shebang</a>. It is a comment that tells the Operating System what interpreter to use for this file if it is ran as an executable. We need to add it to the very top of our <code>cli.js</code>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"><span class="keyword">let</span> name = process.argv[<span class="number">2</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`Hello <span class="subst">$&#123;name&#125;</span>, welcome to node.js!`</span>);</span><br></pre></td></tr></table></figure>
+<p>This means for the OS that this file should be executed using the default node.js version installed on your system (the version that you get by typing <code>node</code> in your terminal).</p>
+<h2 id="Please-give-it-a-name"><a href="#Please-give-it-a-name" class="headerlink" title="Please give it a name"></a>Please give it a name</h2><p>At this moment it is time to turn our CLI to an NPM package. All we need is creating a <code>package.json</code> file that will contain information about the package. You can create it manually or automatically using <code>npm init -y</code> command (feel free to modify the default properties as you want).</p>
+<p>The last step is telling NPM the command’s name that we want to use. As we said before we want to replace <code>node cli.js {name}</code> by <code>hello {name}</code>. To achieve this, we simply add a <code>bin</code> property to <code>package.json</code> that contains the command’s name and the corresponding file to execute.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//package.json</span></span><br><span class="line"><span class="string">"bin"</span>: &#123;</span><br><span class="line">  <span class="string">"hello"</span>: <span class="string">"cli.js"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>By reaching this point, our CLI is finished and it is ready to be published on NPM. But first let’s test it locally to see if everything is working as expected.</p>
+<h2 id="Test-it-locally-first"><a href="#Test-it-locally-first" class="headerlink" title="Test it locally first"></a>Test it locally first</h2><p>To test the CLI locally we need it to be installed globally, so the <code>hello</code> command will be available everywhere. But we haven’t publish it yet, how can it be installed globally? Here we need to run the <code>npm link</code> command.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hello</span><br><span class="line">npm link</span><br></pre></td></tr></table></figure>
+<p>when you run this command inside a package folder, it will make it available in the global scope as if it was installed with the <code>-g</code> flag.</p>
+<p>Now, let’s test the CLI by typing <code>hello {name}</code>. Note that you can run <code>hello</code> from any location on your system, you are not limited to the package folder.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hello Mohammed</span><br><span class="line">Hello Mohammed, welcome to node.js!</span><br></pre></td></tr></table></figure>
+<p><em>Congratulations!!</em> You’ve made your first node.js CLI. If you want to publish it to NPM and show it to the world, you’re almost there.</p>
+<h2 id="Publish-it-to-NPM"><a href="#Publish-it-to-NPM" class="headerlink" title="Publish it to NPM"></a>Publish it to NPM</h2><p>This is the easiest part as you may not expected. First, you need to create an account on <a href="https://www.npmjs.com" target="_blank" rel="noopener">npmjs.com</a>. Then login to it from you terminal using <code>npm login</code>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm login</span><br><span class="line">Username: npmuser</span><br><span class="line">Password:</span><br><span class="line">Email: (this IS public) npmuser@gmail.com</span><br><span class="line">Logged <span class="keyword">in</span> as npmuser on https://registry.npmjs.org/.</span><br></pre></td></tr></table></figure>
+<p>It will ask you for your <code>username</code>, <code>password</code> &amp; <code>email</code> and you should provide the correct credentials. Once you are logged in successfully, you will be able to publish your CLI and share with the world by running <code>npm publish</code> from the package folder.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hello</span><br><span class="line">npm publish</span><br></pre></td></tr></table></figure>
+<p>If there is no NPM package already published which have the same name as yours, after some second you can see your package live. Otherwise, you have to change the <code>name</code> property in <code>package.json</code> to an available value.</p>
+<p>Now, everyone on planet earth with access to internet can install your package using <code>npm i -g {yourPackageName}</code> and execute it on there own machines. Thus, you’ve made your first contribution to a big and awesome community. Finally, don’t forget to share your code for good.</p>
+</article>
+</div>
+  </div>
+</body>
+</html>

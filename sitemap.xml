@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mokhnache.com/blog/how-to-create-a-node-cli-and-publish-it-to-npm/</loc>
+    
+    <lastmod>2019-05-26T15:30:49.330Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mokhnache.com/blog/firefox-vs-chrome-memory-usage/</loc>
     
-    <lastmod>2018-12-17T21:14:17.964Z</lastmod>
+    <lastmod>2019-05-26T13:22:55.714Z</lastmod>
     
   </url>
   
