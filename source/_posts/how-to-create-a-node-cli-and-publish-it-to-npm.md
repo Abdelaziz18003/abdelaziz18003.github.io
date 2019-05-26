@@ -1,5 +1,5 @@
 ---
-title: How to create node.js CLI an publish it to NPM
+title: How to create a node.js CLI an publish it to NPM
 description: In this article, we will see together how to create a basic node.js CLI and share it with the world using NPM.
 photos:
   - /img/node-cli.jpg
