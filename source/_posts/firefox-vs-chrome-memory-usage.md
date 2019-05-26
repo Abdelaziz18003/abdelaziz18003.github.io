@@ -1,5 +1,6 @@
 ---
 title: "Firefox vs Chrome: Memory usage"
+date: Mon Dec 17 2018 14:19:01 GMT+0100
 description: At the end of 2017, Mozilla introduced Firefox Quantum the blazing fast, completely reinvented Firefox. It was shipped with a new beautiful look and the speed compared to it's previous versions was obvious.
 photos:
   - /img/chrome-vs-firefox.jpg
