@@ -3,20 +3,33 @@ menu:
   home: /
   blog: /blog
 
-headline: Electronic Engineer, Blogger & Web Developer
+headline: Abdelaziz Mokhnache
+aboutme: PhD Student & Fullstack Javascript Developer
 
 social:
-  facebook: https://www.facebook.com/abdelazizmokhnache
-  twitter: https://www.twitter.com/abdelaziz18003
-  linkedIn: https://dz.linkedin.com/in/abdelaziz18003
-  youtube: https://www.youtube.com/channel/UCGk9BKT15Twd5MmC32bEMBA
-  github: https://www.github.com/abdelaziz18003/
-  bitbucket: https://www.bitbucket.com/abdelaziz18003/
-  stackoverflow: https://stackoverflow.com/users/5192846/abdelaziz-mokhnache
+  facebook:
+    link: https://www.facebook.com/abdelazizmokhnache
+    icon: icon-facebook-official
+  twitter:
+    link: https://www.twitter.com/abdelaziz18003
+    icon: icon-twitter
+  linkedIn:
+    link: https://dz.linkedin.com/in/abdelaziz18003
+    icon: icon-linkedin
+  youtube:
+    link: https://www.youtube.com/channel/UCGk9BKT15Twd5MmC32bEMBA
+    icon: icon-youtube
+  github:
+    link: https://www.github.com/abdelaziz18003/
+    icon: icon-github
+  bitbucket:
+    link: https://www.bitbucket.com/abdelaziz18003/
+    icon: icon-bitbucket
+  stackoverflow:
+    link: https://stackoverflow.com/users/5192846/abdelaziz-mokhnache
+    icon: icon-stackoverflow
 
 favicon: /img/favicon.jpg
 
-aboutme: |
-  My name is Abdelaziz Mokhnache. I am a PHD student in digital image processing. I work as a freelance Javascript developer on Upwork mostly on Node.js/Vue.js projects. I enjoy learning new skills and sharing knowledge with others too.
 
 google_analytics_enabled: true

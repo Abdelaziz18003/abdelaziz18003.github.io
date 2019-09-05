@@ -1,20 +1,16 @@
-<div>
-  <section class="hero column items-center">
+<div class="homepage">
+  <section class="column items-center">
     <div class="avatar">
       <%- image_tag('img/avatar.jpg', {alt: 'avatar image'}) %>
     </div>
+
     <h1 class="text-center"><%= theme.headline %></h1>
+    <p class=" description text-center"><%- theme.aboutme %></p>
 
     <div class="social text-center">
       <% for (let i in theme.social) { %>
-        <a href="<%- theme.social[i] %>" target="_blank" class="mr-sm"><%= i %></a>
+        <a href="<%- theme.social[i].link %>" target="_blank" class="mr-xs"><i class="<%- theme.social[i].icon %>"></i></a>
       <% } %>
     </div>
-  </section>
-
-  <hr class="mt-lg">
-    
-  <section class="about">
-    <p class="text-center"><%- theme.aboutme %></p>
   </section>
 </div>
