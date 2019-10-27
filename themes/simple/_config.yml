@@ -1,6 +1,7 @@
 # Nav menu
 menu:
   home: /
+  projects: /projects
   blog: /blog
 
 headline: Abdelaziz Mokhnache
