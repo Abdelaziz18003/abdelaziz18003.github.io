@@ -1,7 +1,7 @@
 <section class="blog">
   <h1>Blog</h1>
   <ul>
-    <% site.posts.each((post, i) => { %>
+    <% site.posts.reverse().each((post, i) => { %>
       <li>
         <a href="<%- url_for(post.path) %>"><%= post.title %></a>
         <small class="ml-md"><%= date(post.date, config.date_format) %></small>
