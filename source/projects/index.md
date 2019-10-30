@@ -31,6 +31,15 @@ A VSCode extension that provides snippets with the basic usage syntax for quasar
 
 <hr>
 
+## gnuplot-imshow
+A tool to display an ndarray of pixels as an image using gnuplot 
+<small>
+**Github:** https://github.com/Abdelaziz18003/gnuplot-imshow
+**NPM:** https://www.npmjs.com/package/gnuplot-imshow
+</small>
+
+<hr>
+
 ## plotbd
 📈 A tool to plot bifurcation diagrams using Node.js and Gnuplot.
 <small>
