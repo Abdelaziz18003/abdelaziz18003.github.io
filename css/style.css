@@ -281,6 +281,7 @@ h1 {
   flex-direction: column;
   max-width: 700px;
   margin: 0px auto;
+  padding: 0.4em;
 }
 a {
   color: #333;
