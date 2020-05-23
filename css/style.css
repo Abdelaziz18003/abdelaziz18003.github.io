@@ -257,6 +257,9 @@ pre .keyword,
 pre .javascript .function {
   color: #c9c;
 }
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   height: 100%;
